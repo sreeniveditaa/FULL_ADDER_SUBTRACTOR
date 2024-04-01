@@ -38,18 +38,52 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+FULL ADDER
+
+![image](https://github.com/sreeniveditaa/FULL_ADDER_SUBTRACTOR/assets/147473268/15fe1ec1-94e6-4f8e-8c43-54029bb98471)
+
+FULL SUBRACTOR
+
+![image](https://github.com/sreeniveditaa/FULL_ADDER_SUBTRACTOR/assets/147473268/6da4cd8c-a54c-4bc8-a8d4-3c16f8f7dc2d)
+
+
 **Procedure**
 
-Write the detailed procedure here
+ STEP 1: Use module project name(input,output) to start the Verilog programmming. 
+ STEP 2: Assign inputs and outputs using the word input and output respectively.
+ STEP 3: Use defined keywords like wire,assign and required logic gates to represent the boolean expression. 
+ STEP 4: Use each output to represnt onre for differnce and the other for borrow. 
+ STEP 5: End the verilog program using keyword endmodule.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+DEVOLOPED BY : SREE NIVEDITAA SARAVANAN
+REGISTER NO. : 212223230213
+
+```
+```
+
+module fulladdsub(a,b,cin,sum,carry,BO,DIFF);
+input a,b,cin;
+output sum,carry,BO,DIFF;
+assign sum=(a^b^cin);
+assign carry=(a&b)|(a&cin)|(b&cin);
+assign DIFF=(a^b^cin);
+assign BO=(~a&b)|(~(a^b)& cin);
+endmodule
+
+```
 
 **RTL Schematic**
 
+![Screenshot 2024-04-01 065107](https://github.com/sreeniveditaa/FULL_ADDER_SUBTRACTOR/assets/147473268/6597434c-de2b-4b54-bb7d-1211474f6a3e)
+
+
 **Output Timing Waveform**
+
+![Screenshot 2024-04-01 065524](https://github.com/sreeniveditaa/FULL_ADDER_SUBTRACTOR/assets/147473268/110e0030-798d-4db1-9f66-7d198caf1c25)
+
 
 **Result:**
 
